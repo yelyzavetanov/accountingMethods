@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/accountingMethods.iml" filepath="$PROJECT_DIR$/.idea/accountingMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kursach/kursach.iml" filepath="$PROJECT_DIR$/kursach/kursach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba01/laba01.iml" filepath="$PROJECT_DIR$/laba01/laba01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba02/laba02.iml" filepath="$PROJECT_DIR$/laba02/laba02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba03/laba03.iml" filepath="$PROJECT_DIR$/laba03/laba03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba04/laba04.iml" filepath="$PROJECT_DIR$/laba04/laba04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba05/laba05.iml" filepath="$PROJECT_DIR$/laba05/laba05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/laba06/laba06.iml" filepath="$PROJECT_DIR$/laba06/laba06.iml" />
+    </modules>
+  </component>
+</project>
