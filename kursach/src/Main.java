@@ -10,7 +10,7 @@ public class Main {
         double[][] A = new double[N][N];
         double[] b = new double[N];
 
-        System.out.println("Поточна директорія: " + new File(".").getAbsolutePath());
+        System.out.println("Поточна директорія: " + new File(".").getAbsolutePath() + "\n");
 
         try {
             readMatrixFromFile( "C:\\comp\\vntu\\accountingMethods\\kursach\\src\\matrix.txt", A, b);
@@ -18,6 +18,15 @@ public class Main {
             System.err.println("Помилка при читанні файлу: " + e.getMessage());
             return;
         }
+
+        double[][] B = {
+                {0.2, -0.1},
+                {0.1,  0.3}
+        };
+        System.out.println("Норма 1: " + norm1(A));
+        System.out.println("Норма 2: " + norm2(A));
+        System.out.println("E-Норма: " + eNorm(A));
+
 
         System.out.println("Гауссa-Жорданa:");
         double[] gaussJordanSolution = gaussJordan(A, b);
@@ -108,6 +117,41 @@ public class Main {
 
         System.out.println("Кількість ітерацій: " + iterations);
         return x;
+    }
+
+    public static double norm1(double[][] B) {
+        double maxSum = 0;
+        for (double[] row : B) {
+            double rowSum = 0;
+            for (double val : row) {
+                rowSum += Math.abs(val);
+            }
+            maxSum = Math.max(maxSum, rowSum);
+        }
+        return maxSum;
+    }
+
+    public static double norm2(double[][] B) {
+        int cols = B[0].length;
+        double maxSum = 0;
+        for (int j = 0; j < cols; j++) {
+            double colSum = 0;
+            for (double[] row : B) {
+                colSum += Math.abs(row[j]);
+            }
+            maxSum = Math.max(maxSum, colSum);
+        }
+        return maxSum;
+    }
+
+    public static double eNorm(double[][] B) {
+        double sum = 0;
+        for (double[] row : B) {
+            for (double val : row) {
+                sum += val * val;
+            }
+        }
+        return Math.sqrt(sum);
     }
 
     public static void printSolution(double[] x) {
